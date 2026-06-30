@@ -1,109 +1,127 @@
-#  Loan Approval Prediction using Ensemble Learning
+# 🏦 Loan Approval Prediction using Ensemble Learning
 
-An end-to-end Machine Learning project that predicts whether a loan application will be approved using multiple Ensemble Learning algorithms. The project compares several classification models, performs hyperparameter tuning, evaluates model performance using multiple metrics, and explains predictions through feature importance analysis.
+<p align="center">
 
----
+![Python](https://img.shields.io/badge/Python-3.12-blue?style=for-the-badge&logo=python)
+![Scikit-Learn](https://img.shields.io/badge/Scikit--Learn-ML-orange?style=for-the-badge&logo=scikitlearn)
+![Status](https://img.shields.io/badge/Project-Completed-brightgreen?style=for-the-badge)
+![License](https://img.shields.io/badge/License-MIT-green?style=for-the-badge)
 
-##  Project Overview
-
-Financial institutions process thousands of loan applications every day. Accurately predicting loan approval helps reduce financial risk while ensuring fair lending decisions.
-
-In this project, multiple Ensemble Learning techniques are implemented and compared to identify the best-performing model for loan approval prediction.
-
----
-
-##  Objectives
-
-- Perform Exploratory Data Analysis (EDA)
-- Handle missing values
-- Engineer meaningful features
-- Build a robust preprocessing pipeline
-- Compare multiple classification models
-- Tune the best-performing model
-- Interpret feature importance
-- Evaluate using multiple performance metrics
+</p>
 
 ---
 
-##  Dataset
+# 📸 Project Preview
 
-**Source:** Kaggle Loan Prediction Dataset
+<p align="center">
+
+<img src="images/model_comparison.png" width="800">
+
+</p>
+
+---
+
+# 📌 Project Overview
+
+This project predicts whether a loan application will be **Approved** or **Rejected** using multiple Machine Learning classification algorithms, with a primary focus on **Ensemble Learning**.
+
+The notebook demonstrates a complete end-to-end Machine Learning workflow including:
+
+- 📊 Exploratory Data Analysis
+- 🧹 Data Cleaning
+- ⚙️ Feature Engineering
+- 🏗️ Scikit-Learn Pipeline
+- 🤖 Model Comparison
+- 🔍 Hyperparameter Tuning
+- 📈 Model Explainability
+
+---
+
+# 🎯 Problem Statement
+
+Financial institutions receive thousands of loan applications every year.
+
+The objective is to build a Machine Learning model capable of accurately predicting loan approval decisions based on applicant information while comparing multiple Ensemble Learning algorithms.
+
+---
+
+# 📂 Dataset
+
+**Dataset:** Loan Prediction Dataset
 
 **Target Variable**
 
-- **Loan_Status**
-  - **1 → Loan Approved**
-  - **0 → Loan Rejected**
+| Value | Meaning |
+|-------|---------|
+| 1 | Loan Approved |
+| 0 | Loan Rejected |
 
 ---
 
-##  Technologies Used
+# ⚙️ Tech Stack
 
 - Python
 - Pandas
 - NumPy
-- Scikit-learn
+- Scikit-Learn
 - Matplotlib
 - Seaborn
 - Joblib
 
 ---
 
-##  Workflow
+# 🚀 Project Workflow
 
-### 1️⃣ Data Understanding
-
-- Dataset overview
-- Missing value analysis
-- Duplicate detection
-- Feature inspection
-
----
-
-### 2️⃣ Exploratory Data Analysis
-
-- Target distribution
-- Numerical feature distributions
-- Outlier detection
-- Categorical feature analysis
-- Correlation analysis
-
----
-
-### 3️⃣ Data Cleaning
-
-- Missing value imputation
-- Data type corrections
-- Duplicate removal
-
----
-
-### 4️⃣ Feature Engineering
-
-Created several new features:
-
-- Total Income
-- Loan-Income Ratio
-- Family Size
-- Income Per Person
-- Log Transformed Income
-- Log Transformed Loan Amount
+```
+Raw Dataset
+      │
+      ▼
+Data Understanding
+      │
+      ▼
+Exploratory Data Analysis
+      │
+      ▼
+Missing Value Handling
+      │
+      ▼
+Feature Engineering
+      │
+      ▼
+Preprocessing Pipeline
+      │
+      ▼
+Model Training
+      │
+      ▼
+Model Evaluation
+      │
+      ▼
+Hyperparameter Tuning
+      │
+      ▼
+Feature Importance
+      │
+      ▼
+Final Model
+```
 
 ---
 
-### 5️⃣ Data Preprocessing
+# 🏗️ Feature Engineering
 
-Implemented a Scikit-learn Pipeline using:
+The following features were created:
 
-- ColumnTransformer
-- OneHotEncoder
-- Train/Test Split
+- ✅ Total Income
+- ✅ Loan Income Ratio
+- ✅ Family Size
+- ✅ Income Per Person
+- ✅ Log Applicant Income
+- ✅ Log Loan Amount
 
 ---
 
-### 6️⃣ Model Training
-
-The following models were evaluated:
+# 🤖 Models Compared
 
 - Logistic Regression
 - Decision Tree
@@ -115,26 +133,11 @@ The following models were evaluated:
 
 ---
 
-### 7️⃣ Hyperparameter Tuning
-
-RandomizedSearchCV was used to optimize the AdaBoost Classifier.
-
----
-
-### 8️⃣ Model Explainability
-
-- Feature Importance
-- Confusion Matrix
-- ROC Curve
-- Precision-Recall Curve
-
----
-
-##  Model Performance
+# 📊 Model Performance
 
 | Model | Accuracy | Precision | Recall | F1 Score | ROC-AUC |
 |--------|----------|-----------|--------|----------|---------|
-| AdaBoost | **90.24%** | **88.42%** | **98.82%** | **93.33%** | **84.94%** |
+| 🥇 AdaBoost | **90.24%** | **88.42%** | **98.82%** | **93.33%** | **84.94%** |
 | Logistic Regression | 86.18% | 84.00% | 98.82% | 90.81% | 78.36% |
 | Gradient Boosting | 86.18% | 86.17% | 95.29% | 90.50% | 80.54% |
 | Extra Trees | 85.37% | 83.17% | 98.82% | 90.32% | 77.04% |
@@ -144,22 +147,59 @@ RandomizedSearchCV was used to optimize the AdaBoost Classifier.
 
 ---
 
-##  Best Performing Model
+# 🏆 Best Performing Model
 
-🥇 **AdaBoost Classifier**
+**AdaBoost Classifier**
 
-- Accuracy: **90.24%**
-- Precision: **88.42%**
-- Recall: **98.82%**
-- F1 Score: **93.33%**
-- ROC-AUC: **84.94%**
+✔ Accuracy : **90.24%**
+
+✔ Precision : **88.42%**
+
+✔ Recall : **98.82%**
+
+✔ F1 Score : **93.33%**
+
+✔ ROC-AUC : **84.94%**
 
 ---
 
-##  Repository Structure
+# 📈 Visualizations
+
+## Model Comparison
+
+![](images/model_comparison.png)
+
+---
+
+## Feature Importance
+
+![](images/feature_importance.png)
+
+---
+
+## Confusion Matrix
+
+![](images/confusion_matrix.png)
+
+---
+
+## ROC Curve
+
+![](images/roc_curve.png)
+
+---
+
+## Precision-Recall Curve
+
+![](images/precision_recall_curve.png)
+
+---
+
+# 📁 Repository Structure
 
 ```
-Loan-Approval-Prediction/
+loan-approval-prediction/
+
 │
 ├── notebook/
 │   └── loan_approval_prediction.ipynb
@@ -177,30 +217,35 @@ Loan-Approval-Prediction/
 │
 ├── requirements.txt
 ├── README.md
-└── LICENSE
+├── LICENSE
+└── .gitignore
 ```
 
 ---
 
-## 🚀 Future Improvements
+# 💡 Future Improvements
 
 - XGBoost
 - LightGBM
 - CatBoost
 - SHAP Explainability
-- Streamlit Web Application
-- Model Deployment using Docker
+- Streamlit Deployment
+- Docker Deployment
 
 ---
 
-##  Author
+# 👨‍💻 Author
 
-**Yuwin** or **Godofthunder2407**
+**Yuwin / Godofthunder2407**
 
-GitHub: https://github.com/Yuwin2008
+🌐 GitHub
 
-Discord Username: godofthunder_2407
+https://github.com/Yuwin2008
+
+🌐 Discord Username
+
+godofthunder_2407
 
 ---
 
- If you found this project useful, consider giving it a star!
+If you found this project useful, consider giving it a ⭐.
